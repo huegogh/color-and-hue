@@ -53,7 +53,8 @@
 			"TopLevel",
 			"rightWall",
 			"Azure",
-			"Keyboard"
+			"Keyboard",
+			"Room"
 		],
 		"subfolders": []
 	},
@@ -65,7 +66,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Room1"
 		],
 		"subfolders": []
 	},
