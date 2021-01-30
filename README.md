@@ -2,6 +2,7 @@
 
 ## Game Jam 2021 Project
 Team: Segura | Chansy | Racca | Mejia
+Construct 3 Consultant: "Big Panda" Bhakta
 
 A game based on the theme `lost and found`.
 
