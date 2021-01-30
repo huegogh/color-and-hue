@@ -23,9 +23,25 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
 			"author": "Scirra",
 			"version": "r225",
 			"bundled": false
@@ -54,9 +70,27 @@
 			"rightWall",
 			"Azure",
 			"Keyboard",
-			"Room"
+			"Room",
+			"Camera"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"LeftBarrier",
+					"FloorBarrier",
+					"BedBarrier",
+					"RightBarrier",
+					"NightStandBarrier",
+					"ShelfBarrier1",
+					"ShelfBarrier2",
+					"ShelfBarrier3",
+					"LampBarrier",
+					"DoorBarrier"
+				],
+				"subfolders": [],
+				"name": "Barriers"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],

@@ -1,0 +1,26 @@
+{
+	"name": "Camera",
+	"plugin-id": "TiledBg",
+	"sid": 521397438891222,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 237239819844720
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8268831,
+		"useCollisionPoly": true
+	}
+}

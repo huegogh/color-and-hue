@@ -208,6 +208,27 @@
 				}
 			],
 			"sid": 973530141259830
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 622927919108115
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Camera",
+					"sid": 417114704203969,
+					"parameters": {
+						"x": "lerp(Self.X, Azure.X, 0.009)"
+					}
+				}
+			],
+			"sid": 718602050098880
 		}
 	],
 	"sid": 804160591993430
