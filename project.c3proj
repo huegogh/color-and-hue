@@ -71,7 +71,10 @@
 			"Azure",
 			"Keyboard",
 			"Room",
-			"Camera"
+			"Camera",
+			"logo",
+			"Sprite2",
+			"logobg"
 		],
 		"subfolders": [
 			{
@@ -101,13 +104,16 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"Room1"
+			"Room1",
+			"splashScreen",
+			"mainMenu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Event sheet 2"
 		],
 		"subfolders": []
 	},
