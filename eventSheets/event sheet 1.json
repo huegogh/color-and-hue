@@ -304,6 +304,396 @@
 				}
 			],
 			"sid": 398399768902464
+		},
+    {
+			"eventType": "variable",
+			"name": "CanCamMove",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 397702778873170
+		},
+		{
+			"eventType": "variable",
+			"name": "ShowPC1",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 985652501740287
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-moved",
+					"objectClass": "Azure",
+					"sid": 468761883827347,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Azure",
+					"sid": 624681061676436,
+					"parameters": {
+						"animation": "\"Walk\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 218121963709536
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-stopped",
+					"objectClass": "Azure",
+					"sid": 865285161865266,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Azure",
+					"sid": 738654567155209,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 477623349829340
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-jump",
+					"objectClass": "Azure",
+					"sid": 168562267511926,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Azure",
+					"sid": 816075773864523,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 799902027065417
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-landed",
+					"objectClass": "Azure",
+					"sid": 767979953111127,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Azure",
+					"sid": 967843777662482,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 861091710126417,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Azure",
+							"sid": 269290934334546,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Azure",
+							"sid": 444390190434775,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 761894963673817
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 360708569968416,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Azure",
+					"sid": 602834215846192,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Azure",
+					"sid": 283892004376601,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 174983961025539
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 391494433251053,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Azure",
+					"sid": 814966530159209,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Azure",
+					"sid": 383057541593114,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 762805810378246
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 311259271373138,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Azure",
+					"sid": 486576628496052,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				}
+			],
+			"sid": 973530141259830
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 622927919108115
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 356977806552123,
+					"parameters": {
+						"variable": "CanCamMove"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Camera",
+					"sid": 417114704203969,
+					"parameters": {
+						"x": "lerp(Self.X, Azure.X, 0.009)"
+					}
+				}
+			],
+			"sid": 718602050098880
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Azure",
+					"sid": 279055485580103,
+					"parameters": {
+						"object": "CameraEndPoint"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 406206223580623,
+					"parameters": {
+						"variable": "CanCamMove",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 314524896910871
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Azure",
+					"sid": 458758200847933,
+					"parameters": {
+						"object": "CameraEndPoint2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 547974627983603,
+					"parameters": {
+						"variable": "CanCamMove",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 312222511815234
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Azure",
+					"sid": 350630191443388,
+					"parameters": {
+						"object": "PostCardTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 619965993762892,
+					"parameters": {
+						"variable": "ShowPC1",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "PC1",
+					"sid": 672284593790178,
+					"parameters": {
+						"y": "PC1.Y + 25"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PostCardTrigger",
+					"sid": 877012333420958
+				}
+			],
+			"sid": 970233954637811
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 400767607698900,
+					"parameters": {
+						"variable": "ShowPC1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "PC1",
+					"sid": 578102803708078,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 760884417288976
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Azure",
+					"sid": 607421290651756,
+					"parameters": {
+						"object": "PC1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PC1",
+					"sid": 551567061072876
+				}
+			],
+			"sid": 359475043325089
 		}
 	],
 	"sid": 804160591993430
