@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r225",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -73,8 +81,12 @@
 			"Room",
 			"Camera",
 			"logo",
-			"Sprite2",
-			"logobg"
+			"splashScreenBackground",
+			"logobg",
+			"Sprite",
+			"mainHouse",
+			"Start",
+			"Mouse"
 		],
 		"subfolders": [
 			{
@@ -113,7 +125,7 @@
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"Event sheet 2"
+			"splashScreenEvents"
 		],
 		"subfolders": []
 	},

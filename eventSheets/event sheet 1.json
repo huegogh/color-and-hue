@@ -229,6 +229,81 @@
 				}
 			],
 			"sid": 718602050098880
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 848843746939511,
+					"parameters": {
+						"object": "Start"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-scale",
+					"objectClass": "Start",
+					"sid": 480423087485303,
+					"parameters": {
+						"scale": "0.5"
+					}
+				}
+			],
+			"sid": 305497776410392
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 352220499065068,
+					"parameters": {
+						"object": "Start"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-scale",
+					"objectClass": "Start",
+					"sid": 620620303205261,
+					"parameters": {
+						"scale": "0.45"
+					}
+				}
+			],
+			"sid": 915883005075124
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 469662705645945,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Start"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 396324300107444,
+					"parameters": {
+						"layout": "Room1"
+					}
+				}
+			],
+			"sid": 398399768902464
 		}
 	],
 	"sid": 804160591993430
