@@ -4,7 +4,95 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
-			"instances": [],
+			"instances": [
+				{
+					"type": "mainHouse",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 24,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 471,
+						"y": 299.5102995315425,
+						"width": 953.5639395998942,
+						"height": 606.8134161090236,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 23,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 349,
+						"y": 88,
+						"width": 662,
+						"height": 146,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Start",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 25,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 129,
+						"y": 539,
+						"width": 217.8459136758437,
+						"height": 64.44922359614061,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 867569184127984,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -36,5 +124,5 @@
 	"width": 1800,
 	"height": 1200,
 	"unboundedScrolling": false,
-	"eventSheet": null
+	"eventSheet": "Event sheet 1"
 }

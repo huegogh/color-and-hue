@@ -6,7 +6,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Sprite2",
+					"type": "splashScreenBackground",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -124,5 +124,5 @@
 	"width": 1800,
 	"height": 1200,
 	"unboundedScrolling": false,
-	"eventSheet": "Event sheet 2"
+	"eventSheet": "splashScreenEvents"
 }

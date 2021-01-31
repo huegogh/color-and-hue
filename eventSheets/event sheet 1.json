@@ -267,6 +267,13 @@
 					"sid": 279055485580103,
 					"parameters": {
 						"object": "CameraEndPoint"
+					}},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 848843746939511,
+					"parameters": {
+						"object": "Start"
 					}
 				}
 			],
@@ -282,21 +289,41 @@
 				}
 			],
 			"sid": 314524896910871
+					"id": "set-scale",
+					"objectClass": "Start",
+					"sid": 480423087485303,
+					"parameters": {
+						"scale": "0.5"
+					}
+				}
+			],
+			"sid": 305497776410392
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
+<<<<<<< HEAD
 					"id": "on-collision-with-another-object",
 					"objectClass": "Azure",
 					"sid": 458758200847933,
 					"parameters": {
 						"object": "CameraEndPoint2"
 					}
+=======
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 352220499065068,
+					"parameters": {
+						"object": "Start"
+					},
+					"isInverted": true
+>>>>>>> 544380f69eced8cdcc6e1da7f7c3cba237924580
 				}
 			],
 			"actions": [
 				{
+<<<<<<< HEAD
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 547974627983603,
@@ -307,21 +334,43 @@
 				}
 			],
 			"sid": 312222511815234
+=======
+					"id": "set-scale",
+					"objectClass": "Start",
+					"sid": 620620303205261,
+					"parameters": {
+						"scale": "0.45"
+					}
+				}
+			],
+			"sid": 915883005075124
+>>>>>>> 544380f69eced8cdcc6e1da7f7c3cba237924580
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
+<<<<<<< HEAD
 					"id": "on-collision-with-another-object",
 					"objectClass": "Azure",
 					"sid": 350630191443388,
 					"parameters": {
 						"object": "PostCardTrigger"
+=======
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 469662705645945,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Start"
+>>>>>>> 544380f69eced8cdcc6e1da7f7c3cba237924580
 					}
 				}
 			],
 			"actions": [
 				{
+<<<<<<< HEAD
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 619965993762892,
@@ -390,6 +439,17 @@
 				}
 			],
 			"sid": 359475043325089
+=======
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 396324300107444,
+					"parameters": {
+						"layout": "Room1"
+					}
+				}
+			],
+			"sid": 398399768902464
+>>>>>>> 544380f69eced8cdcc6e1da7f7c3cba237924580
 		}
 	],
 	"sid": 804160591993430
