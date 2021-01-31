@@ -2,6 +2,26 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "CanCamMove",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 397702778873170
+		},
+		{
+			"eventType": "variable",
+			"name": "ShowPC1",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 985652501740287
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -216,6 +236,14 @@
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 622927919108115
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 356977806552123,
+					"parameters": {
+						"variable": "CanCamMove"
+					}
 				}
 			],
 			"actions": [
@@ -229,6 +257,139 @@
 				}
 			],
 			"sid": 718602050098880
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Azure",
+					"sid": 279055485580103,
+					"parameters": {
+						"object": "CameraEndPoint"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 406206223580623,
+					"parameters": {
+						"variable": "CanCamMove",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 314524896910871
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Azure",
+					"sid": 458758200847933,
+					"parameters": {
+						"object": "CameraEndPoint2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 547974627983603,
+					"parameters": {
+						"variable": "CanCamMove",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 312222511815234
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Azure",
+					"sid": 350630191443388,
+					"parameters": {
+						"object": "PostCardTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 619965993762892,
+					"parameters": {
+						"variable": "ShowPC1",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "PC1",
+					"sid": 672284593790178,
+					"parameters": {
+						"y": "PC1.Y + 25"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PostCardTrigger",
+					"sid": 877012333420958
+				}
+			],
+			"sid": 970233954637811
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 400767607698900,
+					"parameters": {
+						"variable": "ShowPC1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "PC1",
+					"sid": 578102803708078,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 760884417288976
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Azure",
+					"sid": 607421290651756,
+					"parameters": {
+						"object": "PC1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PC1",
+					"sid": 551567061072876
+				}
+			],
+			"sid": 359475043325089
 		}
 	],
 	"sid": 804160591993430

@@ -74,7 +74,13 @@
 			"Camera",
 			"logo",
 			"Sprite2",
-			"logobg"
+			"logobg",
+			"CameraEndPoint",
+			"CameraEndPoint2",
+			"CholoJT",
+			"PostCardTrigger",
+			"LampShade",
+			"PC1"
 		],
 		"subfolders": [
 			{
